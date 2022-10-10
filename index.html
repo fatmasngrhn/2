@@ -1,0 +1,33 @@
+{% extends "tema.html" %}
+
+{% block baslik %}
+    Araç Store
+{% endblock %}
+
+
+
+{% block icerik %}
+<table>
+{% for a in araclar %}
+    <tr>
+    <td colspan="2">
+        <img height="100" width="200" src="static/img/{{a.resimyolu}}">
+        
+    </td>
+    
+    
+    <td><b>Marka</b></td><td>{{ a.marka }}</td>
+    <td><b>Model</b></td><td>{{ a.model }}</td>
+    <td><b>beygir</b></td><td>{{ a.beygir }}</td>
+    <td><b>icerik</b></td><td>{{ a.icerik }}</td>
+    <td><b>renk</b></td><td>{{ a.renk }}</td>
+    <td><b>uretilenUlkeAdi</b></td><td>{{ a.uretilenUlkeAdi }}</td>
+
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+    
+
+
